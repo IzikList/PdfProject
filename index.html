@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #the-canvas {
+            border: 1px solid black;
+            direction: ltr;
+        }
+        .canvasContainer {
+            /* width: 300px;
+            height: 450px;
+            overflow: hidden; */
+            margin: 2px;
+        }
+        #canvasHolder {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <meta charset="UTF-8">
+    <title>Tesseract.js Offline</title>
+    <script src="../node_modules/tesseract.js/dist/tesseract.min.js"></script>
+</head>
+
+<body>
+    <h1>Pdf</h1>
+    
+    <!-- <canvas id="the-canvas"></canvas> -->
+    <input type="file" id="in" value="Choose PDF file"/>
+    <div>Select images and click:</div>
+    <input type="button" value="Read PDF" onclick="getPages()" />
+    <input type="button" value="Convert images to text using OCR" onclick="convert()" />
+    <div>Stutus: <span id="status"></span></div>
+    <div id="canvasHolder"></div>
+    <div id="output">
+        
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+
+</html>
